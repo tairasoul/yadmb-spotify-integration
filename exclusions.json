@@ -4,6 +4,7 @@
     "dist/resolvers/*",
     "dist/auth.js",
     "README.md",
+    ".gitignore",
     "LICENSE",
     ".data",
     ".data/spotify.data",

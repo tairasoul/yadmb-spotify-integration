@@ -39,13 +39,20 @@ const addon = {
                     inputType: stream.type
                 });
                 const thumbnail = info.thumbnail != undefined ? info.thumbnail.url : getHighestResUrl(searched[0]);
+                let artistString = "";
+                for (let i = 0; i < info.artists.length; i++) {
+                    const artist = info.artists[i];
+                    artistString += artist.name;
+                    if (i != info.artists.length - 1)
+                        artistString += ", ";
+                }
                 return {
                     resource,
                     info: {
-                        channelName: info.artists.join(),
+                        channelName: artistString,
                         durationInMs: info.durationInMs,
-                        likes: "Likes are unavailable for Spotify tracks.",
-                        views: "Views are unavailable for Spotify tracks.",
+                        likes: "Likes do not exist for Spotify tracks.",
+                        views: "Views do not exist for Spotify tracks.",
                         highestResUrl: thumbnail
                     }
                 };
