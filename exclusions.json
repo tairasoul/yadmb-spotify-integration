@@ -1,0 +1,11 @@
+[
+    "src/*",
+    "dist/defaultRegex.js",
+    "dist/resolvers/*",
+    "dist/auth.js",
+    "README.md",
+    "LICENSE",
+    ".data",
+    ".data/spotify.data",
+    "*data"
+]
