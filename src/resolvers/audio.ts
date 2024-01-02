@@ -35,7 +35,7 @@ const addon: AddonInfo = {
             async resolve(url) {
                 if (playdl.is_expired()) await playdl.refreshToken();
                 const info = await playdl.spotify(url) as SpotifyTrack;
-                const searched = await playdl.search(info.name, {limit: 1});
+                const searched = await playdl.search(`${info.name} ${info.artists[0].name}`, {limit: 1});
                 const stream = await playdl.stream(searched[0].url);
                 const resource = createAudioResource(stream.stream, {
                     inputType: stream.type
