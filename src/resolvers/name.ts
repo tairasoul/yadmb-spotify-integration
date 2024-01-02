@@ -21,7 +21,8 @@ const addon: AddonInfo = {
                 return "spotify";
             }
         }
-    ]
+    ],
+    private: true
 }
 
 export default addon;

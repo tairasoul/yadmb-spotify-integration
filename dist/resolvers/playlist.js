@@ -40,6 +40,7 @@ const addon = {
                 return returnVal;
             }
         }
-    ]
+    ],
+    private: true
 };
 export default addon;
