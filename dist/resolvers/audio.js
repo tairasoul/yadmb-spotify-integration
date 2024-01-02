@@ -14,13 +14,13 @@ function getHighestResUrl(data) {
     return currentHighestUrl;
 }
 const addon = {
-    name: "Spotify Audio Resolvers",
-    description: "Audio resolvers for yadmb-spotify-integration.",
+    name: "Spotify Support",
+    description: "Support for spotify.",
     credits: "tairasoul",
     version: "1.0.0",
     type: "audioResourceResolver",
     sources: [
-        "https://github.com/tairasoul/YADMB/blob/main/src/resolvers/audio.ts"
+        "https://github.com/tairasoul/yadmb-spotify-integration"
     ],
     resourceResolvers: [
         {

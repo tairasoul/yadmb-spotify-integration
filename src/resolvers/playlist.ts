@@ -41,7 +41,8 @@ const addon: AddonInfo = {
                 return returnVal;
             }
         }
-    ]
+    ],
+    private: true
 }
 
 export default addon;

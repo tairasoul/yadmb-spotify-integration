@@ -19,6 +19,7 @@ const addon = {
                 return "spotify";
             }
         }
-    ]
+    ],
+    private: true
 };
 export default addon;
