@@ -1,4 +1,4 @@
-import { AddonInfo } from "yadmb-types/types/addonTypes"
+import { AddonInfo, infoData } from "yadmb-types/types/addonTypes"
 import { createAudioResource } from "@discordjs/voice";
 import playdl, { YouTubeVideo, SpotifyTrack } from "play-dl/dist/index.js";
 import reg from "../defaultRegex.js";
@@ -53,8 +53,9 @@ const addon: AddonInfo = {
                     info: {
                         channelName: artistString,
                         durationInMs: info.durationInMs,
-                        likes: "Likes do not exist for Spotify tracks.",
-                        views: "Views do not exist for Spotify tracks.",
+                        fields: [
+                            {name: "Explicit", value: `${info.explicit}`}
+                        ],
                         highestResUrl: thumbnail
                     }
                 }

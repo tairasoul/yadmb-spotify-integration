@@ -26,8 +26,8 @@ devDependencies:
     specifier: ^20.10.6
     version: 20.10.6
   yadmb-types:
-    specifier: ^2.2.0
-    version: 2.2.0
+    specifier: ^2.3.0
+    version: 2.3.0
 
 packages:
 
@@ -149,8 +149,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  /yadmb-types@2.2.0:
-    resolution: {integrity: sha512-jXlnsFfhdPgJ4Ip7qllhJqDi9rbXnjpDRbI73cATRptt+jE/qkodDjvh0DPypj8kAxTxOWBTWYWO5Hr5abiF8g==}
+  /yadmb-types@2.3.0:
+    resolution: {integrity: sha512-8nFIHwkTbjB0E9KiZLKhkXtNkxp87ahPO4Czl60AgX/Evet3ki4rwjIyaSyNFzcq4eg9P7w07xRKsa4mV+PzKw==}
     dependencies:
       '@discordjs/voice': 0.16.1
       '@oceanicjs/builders': 1.1.9(oceanic.js@1.8.1)
