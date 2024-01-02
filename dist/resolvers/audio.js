@@ -51,8 +51,9 @@ const addon = {
                     info: {
                         channelName: artistString,
                         durationInMs: info.durationInMs,
-                        likes: "Likes do not exist for Spotify tracks.",
-                        views: "Views do not exist for Spotify tracks.",
+                        fields: [
+                            { name: "Explicit", value: `${info.explicit}` }
+                        ],
                         highestResUrl: thumbnail
                     }
                 };
