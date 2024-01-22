@@ -2,7 +2,6 @@
     "src/*",
     "dist/defaultRegex.js",
     "dist/resolvers/*",
-    "dist/utils/*",
     "dist/auth.js",
     "README.md",
     ".gitignore",

@@ -1,16 +1,27 @@
-import fs from "fs";
-import { fileURLToPath } from 'url';
-import path from "path";
 import { AddonInfo } from "yadmb-types/types/addonTypes";
-const __dirname = path.dirname(decodeURIComponent(fileURLToPath(import.meta.url)));
+import { audio } from "./resolvers/audio.js";
+import { provider } from "./resolvers/name.js";
+import { pager } from "./resolvers/pager.js";
+import { playlist } from "./resolvers/playlist.js";
+import { songData } from "./resolvers/song.js";
 
-const resolversDir = path.join(__dirname, "resolvers");
-
-const AddonsRegistered: AddonInfo[] = [];
-
-for (const dir of fs.readdirSync(resolversDir)) {
-    const info: AddonInfo = await import(`file://${resolversDir}/${dir}`).then(m => m.default);
-    AddonsRegistered.push(info);
+const addon: AddonInfo = {
+    name: "Spotify Support",
+    description: "Adds support for Spotify.",
+    version: "1.1.0",
+    credits: "tairasoul",
+    sources: [
+        "https://github.com/tairasoul/yadmb-spotify-integration"
+    ],
+    data: {
+        resolvers: {
+            audio: [audio],
+            provider: [provider],
+            pager: [pager],
+            playlist: [playlist],
+            songData: [songData]
+        }
+    }
 }
 
-export default AddonsRegistered;
+export default addon;
