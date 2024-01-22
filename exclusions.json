@@ -2,11 +2,13 @@
     "src/*",
     "dist/defaultRegex.js",
     "dist/resolvers/*",
+    "dist/utils/*",
     "dist/auth.js",
     "README.md",
     ".gitignore",
     "LICENSE",
     ".data",
     ".data/spotify.data",
-    "*data"
+    "*data",
+    ".git/*"
 ]

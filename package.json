@@ -3,12 +3,13 @@
 		"@discordjs/voice": "^0.16.1",
 		"@oceanicjs/builders": "^1.1.9",
 		"humanize-duration": "^3.31.0",
+		"oceanic.js": "^1.8.1",
 		"play-dl": "^1.9.7"
 	},
 	"type": "module",
 	"devDependencies": {
 		"@types/humanize-duration": "^3.27.3",
 		"@types/node": "^20.10.6",
-		"yadmb-types": "^2.3.0"
+		"yadmb-types": "^2.4.0"
 	}
 }
