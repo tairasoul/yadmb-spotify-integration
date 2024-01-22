@@ -66,7 +66,7 @@ const addon: AddonInfo = {
                 }
                 embed.setImage(thumbnail);
                 embed.addField("Author", sp.artists.join());
-                embed.addField("Duration", humanizeDuration(sp.durationInMs));
+                embed.addField("Duration", humanizeDuration(sp.durationInSec * 1000));
                 return {
                     id: track.name,
                     type: "song",

@@ -50,7 +50,7 @@ const addon = {
                     resource,
                     info: {
                         channelName: artistString,
-                        durationInMs: info.durationInMs,
+                        durationInMs: info.durationInSec * 1000,
                         fields: [
                             { name: "Explicit", value: `${info.explicit}` }
                         ],
