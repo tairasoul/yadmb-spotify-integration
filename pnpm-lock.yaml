@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^20.10.6
     version: 20.10.6
   yadmb-types:
-    specifier: ^2.4.0
-    version: 2.4.0
+    specifier: ^2.5.0
+    version: 2.5.0
 
 packages:
 
@@ -54,7 +54,6 @@ packages:
   /@fastify/busboy@2.1.0:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
-    dev: false
 
   /@oceanicjs/builders@1.1.9(oceanic.js@1.8.1):
     resolution: {integrity: sha512-EzYTw6Pqp2u8v5OMZqhr1GmI4IPiZEzhzSdE+4qMVnZUlN6sKePOhXazAfbqaHBwbFqmKEJENiYGEUWYkXYxAw==}
@@ -62,15 +61,6 @@ packages:
       oceanic.js: ^1.7.1
     dependencies:
       oceanic.js: 1.8.1
-    dev: false
-
-  /@oceanicjs/builders@1.1.9(oceanic.js@1.9.0):
-    resolution: {integrity: sha512-EzYTw6Pqp2u8v5OMZqhr1GmI4IPiZEzhzSdE+4qMVnZUlN6sKePOhXazAfbqaHBwbFqmKEJENiYGEUWYkXYxAw==}
-    peerDependencies:
-      oceanic.js: ^1.7.1
-    dependencies:
-      oceanic.js: 1.9.0
-    dev: true
 
   /@types/humanize-duration@3.27.3:
     resolution: {integrity: sha512-wiiiFYjnrYDJE/ujU7wS/NShqp12IKrejozjDtcejP0zYi+cjyjVcfZHwcFUDKVJ7tHGsmgeW2ED92ABIIjfpg==}
@@ -109,24 +99,6 @@ packages:
       - node-opus
       - opusscript
       - utf-8-validate
-    dev: false
-
-  /oceanic.js@1.9.0:
-    resolution: {integrity: sha512-zBHxBnJDkhYiHvQnTWcLsdRa/0v7+S2BYHWS3TLZpmMDXJU/+KOB9oL17YqSK8xvfpA0ykIsZTPKTgwxQUfLxA==}
-    engines: {node: '>=18.13.0'}
-    dependencies:
-      tslib: 2.6.2
-      ws: 8.16.0
-    optionalDependencies:
-      '@discordjs/voice': 0.16.1
-    transitivePeerDependencies:
-      - '@discordjs/opus'
-      - bufferutil
-      - ffmpeg-static
-      - node-opus
-      - opusscript
-      - utf-8-validate
-    dev: true
 
   /play-audio@0.5.2:
     resolution: {integrity: sha512-ZAqHUKkQLix2Iga7pPbsf1LpUoBjcpwU93F1l3qBIfxYddQLhxS6GKmS0d3jV8kSVaUbr6NnOEcEMFvuX93SWQ==}
@@ -167,7 +139,6 @@ packages:
     engines: {node: '>=14.0'}
     dependencies:
       '@fastify/busboy': 2.1.0
-    dev: false
 
   /ws@8.16.0:
     resolution: {integrity: sha512-HS0c//TP7Ina87TfiPUz1rQzMhHrl/SG2guqRcTOIUYD2q8uhUdNHZYJUaQ8aTGPzCh+c6oawMKW35nFl1dxyQ==}
@@ -181,12 +152,12 @@ packages:
       utf-8-validate:
         optional: true
 
-  /yadmb-types@2.4.0:
-    resolution: {integrity: sha512-514vzRGqyfDQN304c1ga3aZilwz49zJDpAyeWPt7t6ssZA4aGumjuiVQ8eIOnpZRJsa/Xjt7GD0v/lMUGiGOKQ==}
+  /yadmb-types@2.5.0:
+    resolution: {integrity: sha512-yjf7HUqYDml6aP8cH2iIIPwKPqhhspYmelqSBemJqMxzFwTLkI17W/LPyTdMY+iaYocMU0Mr+TLpuLaMoSRyYg==}
     dependencies:
       '@discordjs/voice': 0.16.1
-      '@oceanicjs/builders': 1.1.9(oceanic.js@1.9.0)
-      oceanic.js: 1.9.0
+      '@oceanicjs/builders': 1.1.9(oceanic.js@1.8.1)
+      oceanic.js: 1.8.1
     transitivePeerDependencies:
       - '@discordjs/opus'
       - bufferutil
