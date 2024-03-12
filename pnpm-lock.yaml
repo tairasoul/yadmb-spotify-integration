@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^20.10.6
     version: 20.10.6
   yadmb-types:
-    specifier: ^2.5.0
-    version: 2.5.0
+    specifier: ^2.6.1
+    version: 2.6.1
 
 packages:
 
@@ -152,8 +152,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  /yadmb-types@2.5.0:
-    resolution: {integrity: sha512-yjf7HUqYDml6aP8cH2iIIPwKPqhhspYmelqSBemJqMxzFwTLkI17W/LPyTdMY+iaYocMU0Mr+TLpuLaMoSRyYg==}
+  /yadmb-types@2.6.1:
+    resolution: {integrity: sha512-M40mbSmz7yCEcVAIP4P0CuyuGocJaxqUyUTJ3sDBjldv/j2EYOoJOdfSfwCxmHlPnglgDEgnnixDX3ak1ViU6g==}
     dependencies:
       '@discordjs/voice': 0.16.1
       '@oceanicjs/builders': 1.1.9(oceanic.js@1.8.1)
