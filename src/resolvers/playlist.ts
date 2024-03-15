@@ -8,15 +8,16 @@ export const playlist: playlistResolver = {
         return reg.test(url);
     },
     priority: 0,
-    async resolve(url, cache) {
-        if (playdl.is_expired()) await playdl.refreshToken();
+    async resolve(url, cache, invalidation) {
         const returnVal: playlistData = {
             title: "temp",
             items: [],
             url: url
         };
-        const sp = await playdl.spotify(url);
-        const data = await cache.get("spotify-playlist-data", sp.id);
+        const id = (new URL(url)).pathname;
+        if (invalidation)
+            await cache.uncache("spotify-playlist-data", id);
+        const data = await cache.get("spotify-playlist-data", id);
         if (data) {
             returnVal.title = data.title;
             const tracks = data.extra.tracks as SpotifyTrack[];
@@ -28,14 +29,24 @@ export const playlist: playlistResolver = {
             }
         }
         else {
+            if (playdl.is_expired()) await playdl.refreshToken();
+            const sp = await playdl.spotify(url);
             if (sp instanceof SpotifyAlbum || sp instanceof SpotifyPlaylist) {
                 returnVal.title = sp.name;
-                for (const track of await sp.all_tracks()) {
+                const tracks = await sp.all_tracks();
+                for (const track of tracks) {
                     returnVal.items.push({
                         title: track.name,
                         url: track.url
                     })
                 }
+                await cache.cache("spotify-playlist-data", {
+                    id: id,
+                    title: sp.name,
+                    extra: {
+                        tracks
+                    }
+                })
             }
             else {
                 return `Spotify url ${url} is not a Spotify album or playlist.`;
